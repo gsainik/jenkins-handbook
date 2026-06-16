@@ -1,0 +1,22 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Workspace Info') {
+            steps {
+                sh 'pwd'
+                sh 'whoami'
+                sh 'hostname'
+            }
+        }
+
+        stage('List Files') {
+            steps {
+                sh 'ls -ltr'
+            }
+        }
+
+    }
+}
