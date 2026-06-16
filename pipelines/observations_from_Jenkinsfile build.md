@@ -79,7 +79,7 @@ drwxr-xr-x 2 jenkins jenkins  4096 Jun 16 17:51 pipelines
 ```
 
 # Key Points to Analyze
-## Command 1 : pwd
+# Command 1: pwd
 
 ```bash
 pwd
