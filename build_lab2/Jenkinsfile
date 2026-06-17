@@ -1,0 +1,32 @@
+pipeline {
+
+    agent any
+
+    environment {
+        APP_NAME = "jenkins-learning"
+        ENV_NAME = "dev"
+        VERSION = "1.0.0"
+    }
+
+    stages {
+
+        stage('Print Variables') {
+            steps {
+                sh 'echo APP_NAME=$APP_NAME'
+                sh 'echo ENV_NAME=$ENV_NAME'
+                sh 'echo VERSION=$VERSION'
+            }
+        }
+
+        stage('Jenkins Variables') {
+            steps {
+                sh 'echo BUILD_NUMBER=$BUILD_NUMBER'
+                sh 'echo JOB_NAME=$JOB_NAME'
+                sh 'echo WORKSPACE=$WORKSPACE'
+                sh 'echo BUILD_URL=$BUILD_URL'
+            }
+        }
+
+    }
+    
+}
